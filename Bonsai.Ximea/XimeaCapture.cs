@@ -57,7 +57,7 @@ namespace Bonsai.Ximea
                     {
                         camera.OpenDeviceBy(OPEN_BY.OPEN_BY_SN, SerialNumber);
                         Configure(camera);
-                        camera.SetParam(PRM.BUFFER_POLICY, BUFF_POLICY.SAFE);
+                        camera.SetParam(PRM.BUFFER_POLICY, BUFF_POLICY.UNSAFE);
                         camera.StartAcquisition();
                     }
                     try
