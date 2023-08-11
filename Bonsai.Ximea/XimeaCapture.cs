@@ -85,6 +85,11 @@ namespace Bonsai.Ximea
                             }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        observer.OnError(ex);
+                        throw;
+                    }
                     finally
                     {
                         camera.StopAcquisition();
