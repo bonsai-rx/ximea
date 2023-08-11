@@ -65,7 +65,6 @@ namespace Bonsai.Ximea
                         await start;
                         using (var cancellation = cancellationToken.Register(camera.StopAcquisition))
                         {
-                            byte[] image = { };
                             XI_IMG img = new XI_IMG();
 
                             while (!cancellationToken.IsCancellationRequested)
