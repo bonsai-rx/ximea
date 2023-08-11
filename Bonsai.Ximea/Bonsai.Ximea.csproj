@@ -26,10 +26,7 @@
   <ItemGroup>
       <Content Include="..\Externals\xiAPI\*.dll" PackagePath="build\net472\bin" />
     <Reference Include="xiApi.NETX64">
-      <HintPath>Externals\xiAPI\SpinnakerNET_v140.dll</HintPath>
-    </Reference>
-    <Reference Include="xiapi64">
-      <HintPath>Externals\SpinnakerNET\xiapi64.dll</HintPath>
+      <HintPath>Externals\xiAPI\xiApi.NETX64.dll</HintPath>
     </Reference>
   </ItemGroup>
 
