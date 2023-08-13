@@ -7,7 +7,6 @@
     <Copyright>Copyright © Bonsai Foundation 2023</Copyright>
     <ProjectUrl>https://github.com/bonsai-rx/ximea</ProjectUrl>
     <PackageIconUrl>https://bonsai-rx.org/assets/images/bonsai.png</PackageIconUrl>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
     <PackageProjectUrl></PackageProjectUrl>
     <PackageLicenseExpression></PackageLicenseExpression>
