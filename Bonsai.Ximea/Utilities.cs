@@ -5,7 +5,7 @@ using xiApi.NET;
 namespace Bonsai.Ximea
 {
 
-    public enum ImageFormat
+    public enum PixelFormat
     {
         //     8 bits per pixel. [Intensity] (see Note5,Note6)
         Mono8 = IMG_FORMAT.MONO8,
@@ -78,27 +78,27 @@ namespace Bonsai.Ximea
 
     internal class ImageConverter
     {
-        public static void GetImageDepth(ImageFormat pixelType, out IplDepth depth, out int channels, out ImageFormat outputFormat)
+        public static void GetImageDepth(PixelFormat pixelType, out IplDepth depth, out int channels, out PixelFormat outputFormat)
         {
             switch (pixelType)
             {
-                case ImageFormat.Mono8:
-                    outputFormat = ImageFormat.Mono8;
+                case PixelFormat.Mono8:
+                    outputFormat = PixelFormat.Mono8;
                     depth = IplDepth.U8;
                     channels = 1;
                     break;
-                case ImageFormat.Mono16:
-                    outputFormat = ImageFormat.Mono16;
+                case PixelFormat.Mono16:
+                    outputFormat = PixelFormat.Mono16;
                     depth = IplDepth.U16;
                     channels = 1;
                     break;
-                case ImageFormat.Rgb24:
-                    outputFormat = ImageFormat.Rgb24;
+                case PixelFormat.Rgb24:
+                    outputFormat = PixelFormat.Rgb24;
                     depth = IplDepth.U8;
                     channels = 3;
                     break;
-                case ImageFormat.Rgb48:
-                    outputFormat = ImageFormat.Rgb48;
+                case PixelFormat.Rgb48:
+                    outputFormat = PixelFormat.Rgb48;
                     depth = IplDepth.U16;
                     channels = 3;
                     break;

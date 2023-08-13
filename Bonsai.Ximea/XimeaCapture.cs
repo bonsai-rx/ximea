@@ -28,14 +28,14 @@ namespace Bonsai.Ximea
         public float Gain { get; set; } = 5;
 
         [Description("Image format, by default MONO8 mode (0) will be used.")]
-        public ImageFormat ImageFormat { get; set; } = ImageFormat.Mono8;
+        public PixelFormat PixelFormat { get; set; } = PixelFormat.Mono8;
 
 
         protected virtual void Configure(xiCam camera)
         {
             camera.SetParam(PRM.EXPOSURE, Exposure);
             camera.SetParam(PRM.GAIN, Gain);
-            camera.SetParam(PRM.IMAGE_DATA_FORMAT, (int) ImageFormat);
+            camera.SetParam(PRM.IMAGE_DATA_FORMAT, (int)PixelFormat);
         }
 
         public override IObservable<XimeaDataFrame> Generate()
@@ -50,10 +50,10 @@ namespace Bonsai.Ximea
             {
                 xiCam camera;
                 camera = new xiCam();
-                ImageConverter.GetImageDepth(ImageFormat, out IplDepth depth, out int channels, out ImageFormat imageFormat);
+                ImageConverter.GetImageDepth(PixelFormat, out IplDepth depth, out int channels, out PixelFormat pixelFormat);
                 return Task.Factory.StartNew(async () =>
                 {
-                    lock(systemLock)
+                    lock (systemLock)
                     {
                         camera.OpenDeviceBy(OPEN_BY.OPEN_BY_SN, SerialNumber);
                         Configure(camera);
