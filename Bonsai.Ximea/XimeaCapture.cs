@@ -30,7 +30,6 @@ namespace Bonsai.Ximea
         [Description("Image format, by default MONO8 mode (0) will be used.")]
         public PixelFormat PixelFormat { get; set; } = PixelFormat.Mono8;
 
-
         protected virtual void Configure(xiCam camera)
         {
             camera.SetParam(PRM.EXPOSURE, Exposure);
@@ -42,7 +41,6 @@ namespace Bonsai.Ximea
         {
             return Generate(Observable.Return(Unit.Default));
         }
-
 
         public IObservable<XimeaDataFrame> Generate<TSource>(IObservable<TSource> start)
         {

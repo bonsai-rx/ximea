@@ -12,13 +12,11 @@ namespace Bonsai.Ximea
         }
 
         public IplImage Image { get; private set; }
-
         public Metadata Metadata { get; private set; }
     }
 
     public class Metadata
     {
-
         public Metadata(XI_IMG imgStruct)
         {
             StructSize =            imgStruct.size;
@@ -84,6 +82,6 @@ namespace Bonsai.Ximea
         public float RangeGainRatio         { get; private set; }
         public float FDownsamplingX         { get; private set; }
         public float FDownsamplingY         { get; private set; }
-        public int UserData                 { get; private set; } 
+        public int UserData                 { get; private set; }
     }
 }
