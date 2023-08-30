@@ -78,7 +78,7 @@ namespace Bonsai.Ximea
                                         channels,
                                         new IntPtr(img.bp));
                                 }
-                                observer.OnNext(new XimeaDataFrame(output, new Metadata(img)));
+                                observer.OnNext(new XimeaDataFrame(output.Clone(), new Metadata(img)));
                             }
                         }
                     }
