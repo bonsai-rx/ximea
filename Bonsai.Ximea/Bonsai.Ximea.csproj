@@ -15,7 +15,7 @@
     <PackageTags>Bonsai Rx Bonsai.Ximea Ximea xiAPI</PackageTags>
     <TargetFramework>net472</TargetFramework>
     <Features>strict</Features>
-    <Version>0.1.0-preview1</Version>
+    <Version>0.2.0-preview1</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
@@ -26,10 +26,20 @@
 
 
   <ItemGroup>
-      <Content Include="..\Externals\xiAPI\*.dll" PackagePath="build\net472\bin" />
-    <Reference Include="xiApi.NETX64">
-      <HintPath>Externals\xiAPI\xiApi.NETX64.dll</HintPath>
+      <Content Include="..\Externals\*.dll" PackagePath="build\net472\bin" />
+      <Content Include="Externals\xiapi64.dll" Link="xiapi64.dll" PackagePath="content">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    <Content Include="Externals\xiApi.NETX64.dll" Link="xiApi.NETX64.dll" PackagePath="content">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Externals\xiapi64.dll" Link="xiapi64.dll" PackagePath="content">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Reference Include="xiApi.Net">
+      <HintPath>Externals\xiApi.NETX64.dll</HintPath>
     </Reference>
   </ItemGroup>
+
 
 </Project>
