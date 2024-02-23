@@ -24,15 +24,20 @@
     <PackageReference Include="OpenCV.Net" Version="3.4.2" />
   </ItemGroup>
 
-
-
   <ItemGroup>
-    <Content Include="$(SolutionDir)runtimes\win-x64\native\*.dll" PackagePath="runtimes\win-x64\native" TargetPath="%(Filename)%(Extension)" CopyToOutputDirectory="Always" />
+    <Content Include="Bonsai.Ximea.props" PackagePath="build\net462" />
+    <Content Include="..\Externals\xiApi\**\*.dll" PackagePath="build\net462\bin" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="xiApi.Net">
-      <HintPath>$(MSBuildThisFileDirectory)runtimes\win-x64\native\xiApi.NETX64.dll</HintPath>
+    <Content Include="Bonsai.Ximea.props" PackagePath="build\net462" />
+    <Content Include="Bonsai.Ximea.targets" PackagePath="build\net462" />
+    <Content Include="..\Externals\xiApi\**\*.dll" PackagePath="build\net462\bin" />
+    <Reference Include="xiApi">
+      <HintPath>..\Externals\xiApi\x64\xiapi64.dll</HintPath>
+    </Reference>
+    <Reference Include="xiApi.NET">
+      <HintPath>..\Externals\xiApi\x64\xiApi.NETX64.dll</HintPath>
     </Reference>
   </ItemGroup>
 
