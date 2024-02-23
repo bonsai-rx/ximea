@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Title>Bonsai.Ximea</Title>
-    <Description>Bonsai Library containing modules for acquiring images from Ximea cameras. Ximea xiAPI is required.</Description>
+    <Description>Bonsai Library containing modules for acquiring images from Ximea cameras. Tested with 'XIMEA Windows Software Package Stable' version 4.26.01 (2022)</Description>
     <Authors>Bonsai</Authors>
     <Copyright>Copyright © Bonsai Foundation CIC and Contributors 2024</Copyright>
     <ProjectUrl>https://github.com/bonsai-rx/ximea</ProjectUrl>
