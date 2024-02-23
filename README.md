@@ -1,12 +1,11 @@
 # ximea
 A Bonsai library for interfacing with XIMEA cameras using the xiAPI
 
-
-## Application example
+## Application examples
 
 ### How to create a custom operator
 
-A custom operator can be useful to encapsulate custom initialization logic, or to create a reusable component that can be shared with others. In this example, we will create a custom operator that initializes a XIMEA camera with a specific set of parameters and log them to disk. If using this script as an extension, [remember to add the Ximea package to your `Extensions.cproj` file](https://bonsai-rx.org/docs/articles/scripting-extensions.html).
+A custom operator can be useful to encapsulate custom initialization logic or to create a reusable component that can be shared with others. In this example, we will create a custom operator that initializes a XIMEA camera with a specific set of parameters and log them to disk. If using this script as an extension, [remember to add the Ximea package to your `Extensions.cproj` file](https://bonsai-rx.org/docs/articles/scripting-extensions.html).
 
 ```csharp
 using System;
