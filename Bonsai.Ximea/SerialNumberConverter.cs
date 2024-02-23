@@ -8,7 +8,7 @@ class SerialNumberConverter : StringConverter
         return true;
     }
 
-    public override TypeConverter.StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
+    public override StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
     {
         var camEnum = new xiCamEnum();
         var camCount = camEnum.ReEnumerate();
