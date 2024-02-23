@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Condition="'$(Platform.ToLower())' == 'x64' Or '$(Platform.ToLower())' == 'anycpu'">">
-    <Reference Include="xiApi">
-      <HintPath>$(MSBuildThisFileDirectory)..\..\build\net462\bin\x64\xiapi64.dll</HintPath>
-    </Reference>
     <Reference Include="xiApi.NET">
-      <HintPath>$(MSBuildThisFileDirectory)..\..\build\net462\bin\x64\xiApi.NETX64.dll</HintPath>
+      <HintPath>$(MSBuildThisFileDirectory)..\build\net472\bin\x64\xiApi.NETX64.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

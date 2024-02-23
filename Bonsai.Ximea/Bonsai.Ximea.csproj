@@ -25,19 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Bonsai.Ximea.props" PackagePath="build\net462" />
-    <Content Include="..\Externals\xiApi\**\*.dll" PackagePath="build\net462\bin" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Bonsai.Ximea.props" PackagePath="build\net462" />
-    <Content Include="Bonsai.Ximea.targets" PackagePath="build\net462" />
-    <Content Include="..\Externals\xiApi\**\*.dll" PackagePath="build\net462\bin" />
-    <Reference Include="xiApi">
-      <HintPath>..\Externals\xiApi\x64\xiapi64.dll</HintPath>
-    </Reference>
+    <Content Include="Bonsai.Ximea.props" PackagePath="build\net472" />
+    <Content Include="Externals\xiApi\**\*.dll" PackagePath="build\net472\bin" />
     <Reference Include="xiApi.NET">
-      <HintPath>..\Externals\xiApi\x64\xiApi.NETX64.dll</HintPath>
+      <HintPath>Externals\xiApi\x64\xiApi.NETX64.dll</HintPath>
     </Reference>
   </ItemGroup>
 
