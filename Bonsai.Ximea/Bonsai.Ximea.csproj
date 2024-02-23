@@ -15,7 +15,7 @@
     <PackageTags>Bonsai Rx Ximea xiAPI</PackageTags>
     <TargetFramework>net472</TargetFramework>
     <Features>strict</Features>
-    <Version>0.1.0</Version>
+    <Version>0.1.0-preview01</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 

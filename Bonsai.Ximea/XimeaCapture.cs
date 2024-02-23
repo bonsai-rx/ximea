@@ -46,6 +46,11 @@ namespace Bonsai.Ximea
         {
             return Observable.Create<XimeaDataFrame>((observer, cancellationToken) =>
             {
+                if (string.IsNullOrEmpty(SerialNumber))
+                {
+                    throw new InvalidOperationException("The serial number of the camera must be specified.");
+                }
+
                 xiCam camera;
                 camera = new xiCam();
                 ImageConverter.GetImageDepth(PixelFormat, out IplDepth depth, out int channels, out PixelFormat pixelFormat);
