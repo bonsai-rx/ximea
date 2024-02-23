@@ -3,19 +3,19 @@
   <PropertyGroup>
     <Title>Bonsai.Ximea</Title>
     <Description>Bonsai Library containing modules for acquiring images from Ximea cameras. Ximea xiAPI is required.</Description>
-    <Authors>Bruno Cruz, Gonçalo Lopes</Authors>
-    <Copyright>Copyright © Bonsai Foundation 2023</Copyright>
+    <Authors>Bonsai</Authors>
+    <Copyright>Copyright © Bonsai Foundation CIC and Contributors 2024</Copyright>
     <ProjectUrl>https://github.com/bonsai-rx/ximea</ProjectUrl>
     <PackageIconUrl>https://bonsai-rx.org/assets/images/bonsai.png</PackageIconUrl>
     <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
-    <PackageProjectUrl></PackageProjectUrl>
-    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/bonsai-rx/ximea</PackageProjectUrl>  
+    <PackageLicenseUrl>https://bonsai-rx.org/license</PackageLicenseUrl>  
     <PackageIcon></PackageIcon>
-    <PackageOutputPath></PackageOutputPath>
-    <PackageTags>Bonsai Rx Bonsai.Ximea Ximea xiAPI</PackageTags>
+    <PackageOutputPath>..\bin\$(Configuration)</PackageOutputPath>  
+    <PackageTags>Bonsai Rx Ximea xiAPI</PackageTags>
     <TargetFramework>net472</TargetFramework>
     <Features>strict</Features>
-    <Version>0.2.0-preview1</Version>
+    <Version>0.1.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
@@ -25,21 +25,15 @@
   </ItemGroup>
 
 
+
   <ItemGroup>
-      <Content Include="..\Externals\*.dll" PackagePath="build\net472\bin" />
-      <Content Include="Externals\xiapi64.dll" Link="xiapi64.dll" PackagePath="content">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
-    <Content Include="Externals\xiApi.NETX64.dll" Link="xiApi.NETX64.dll" PackagePath="content">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Externals\xiapi64.dll" Link="xiapi64.dll" PackagePath="content">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Reference Include="xiApi.Net">
-      <HintPath>Externals\xiApi.NETX64.dll</HintPath>
-    </Reference>
+    <Content Include="$(SolutionDir)runtimes\win-x64\native\*.dll" PackagePath="runtimes\win-x64\native" TargetPath="%(Filename)%(Extension)" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="xiApi.Net">
+      <HintPath>$(MSBuildThisFileDirectory)runtimes\win-x64\native\xiApi.NETX64.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>
