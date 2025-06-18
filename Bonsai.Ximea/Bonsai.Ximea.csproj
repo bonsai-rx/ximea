@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Title>Bonsai.Ximea</Title>
+    <Description>Bonsai Library containing modules for acquiring images from XIMEA cameras. XIMEA API version 4.28.01 is required.</Description>
+    <Authors>Bonsai</Authors>
+    <Copyright>Copyright © Bonsai Foundation CIC and Contributors 2024</Copyright>
+    <ProjectUrl>https://github.com/bonsai-rx/ximea</ProjectUrl>
+    <PackageIconUrl>https://bonsai-rx.org/assets/images/bonsai.png</PackageIconUrl>
+    <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/bonsai-rx/ximea</PackageProjectUrl>  
+    <PackageLicenseUrl>https://bonsai-rx.org/license</PackageLicenseUrl>  
+    <PackageIcon></PackageIcon>
+    <PackageOutputPath>..\bin\$(Configuration)</PackageOutputPath>  
+    <PackageTags>Bonsai Rx Ximea xiAPI</PackageTags>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <TargetFramework>net472</TargetFramework>
+    <Features>strict</Features>
+    <Version>0.1.0-preview01</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bonsai.Core" Version="2.8.1" />
+    <PackageReference Include="OpenCV.Net" Version="3.4.2" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <XimeaApiPath>Externals\xiApi\</XimeaApiPath>
+    <XimeaApiNativePath>$(XimeaApiPath)native\</XimeaApiNativePath>
+    <XimeaApiNativeFileName>xiapi64.dll</XimeaApiNativeFileName>
+    <XimeaApiNetFileName>xiApi.NETX64.dll</XimeaApiNetFileName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Bonsai.Ximea.props" PackagePath="build\net472" />
+    <Content Include="$(XimeaApiPath)net472\$(XimeaApiNetFileName)" PackagePath="build\net472\bin" />
+    <Content Include="$(XimeaApiNativePath)$(XimeaApiNativeFileName)" PackagePath="runtimes\win-x64\native" />
+    <Reference Include="xiApi.NET">
+      <HintPath>$(XimeaApiPath)net472\$(XimeaApiNetFileName)</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="UnzipXimeaApiNative" BeforeTargets="Build">
+    <Unzip SourceFiles="$(XimeaApiNativePath)$(XimeaApiNativeFileName).zip" DestinationFolder="$(XimeaApiNativePath)" Condition="!Exists('$(XimeaApiNativePath)$(XimeaApiNativeFileName)')" />
+  </Target>
+
+</Project>
