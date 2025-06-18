@@ -1,23 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Title>Bonsai.Ximea</Title>
+    <Title>Bonsai - XIMEA Library</Title>
     <Description>Bonsai Library containing modules for acquiring images from XIMEA cameras. XIMEA API version 4.28.01 is required.</Description>
-    <Authors>Bonsai</Authors>
-    <Copyright>Copyright © Bonsai Foundation CIC and Contributors 2024</Copyright>
-    <ProjectUrl>https://github.com/bonsai-rx/ximea</ProjectUrl>
-    <PackageIconUrl>https://bonsai-rx.org/assets/images/bonsai.png</PackageIconUrl>
-    <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
-    <PackageProjectUrl>https://github.com/bonsai-rx/ximea</PackageProjectUrl>  
-    <PackageLicenseUrl>https://bonsai-rx.org/license</PackageLicenseUrl>  
-    <PackageIcon></PackageIcon>
-    <PackageOutputPath>..\bin\$(Configuration)</PackageOutputPath>  
-    <PackageTags>Bonsai Rx Ximea xiAPI</PackageTags>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <TargetFramework>net472</TargetFramework>
-    <Features>strict</Features>
-    <Version>0.1.0-preview01</Version>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>

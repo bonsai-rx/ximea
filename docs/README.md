@@ -1,4 +1,4 @@
-# ximea
+# Bonsai.Ximea
 A Bonsai library for interfacing with XIMEA cameras using the xiAPI
 
 ## Application examples
