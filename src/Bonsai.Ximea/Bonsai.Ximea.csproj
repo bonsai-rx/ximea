@@ -31,7 +31,7 @@
     </Reference>
   </ItemGroup>
 
-  <Target Name="UnzipXimeaApiNative" BeforeTargets="Build">
+  <Target Name="UnzipXimeaApiNative" BeforeTargets="BeforeBuild">
     <Unzip SourceFiles="$(XimeaApiNativePath)$(XimeaApiNativeFileName).zip" DestinationFolder="$(XimeaApiNativePath)" Condition="!Exists('$(XimeaApiNativePath)$(XimeaApiNativeFileName)')" />
   </Target>
 
