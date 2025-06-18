@@ -1,5 +1,6 @@
-bin
-obj
-packages
-.vs
+.bonsai/Bonsai.exe*
+.bonsai/Packages/
+.bonsai/Settings/
+.vs/
+/artifacts/
 xiapi64.dll

@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonsai.Ximea", "Bonsai.Ximea.csproj", "{DB75CF58-3D55-48FB-8FE0-89642BC41BAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonsai.Ximea", "src\Bonsai.Ximea\Bonsai.Ximea.csproj", "{DB75CF58-3D55-48FB-8FE0-89642BC41BAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{DEE5DD87-39C1-BF34-B639-A387DCCF972B}"
+	ProjectSection(SolutionItems) = preProject
+		build\Common.csproj.props = build\Common.csproj.props
+		build\Common.csproj.targets = build\Common.csproj.targets
+		build\Common.Tests.csproj.props = build\Common.Tests.csproj.props
+		build\icon.png = build\icon.png
+		build\Package.props = build\Package.props
+		build\Project.csproj.props = build\Project.csproj.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
