@@ -81,4 +81,4 @@ For additional documentation and examples, refer to the [official Bonsai documen
 
 ## Feedback & Contributing
 
-`Bonsai.Ximea` is released as open-source under the [MIT license](https://licenses.nuget.org/MIT). Bug reports and contributions are welcome at [the GitHub repository](https://github.com/bonsai-rx/ximea).
+`Bonsai.Ximea` is released as open-source under the [MIT license](https://licenses.nuget.org/MIT). Bug reports and contributions are welcome at [the GitHub repository](https://github.com/bonsai-rx/ximea). `Bonsai.Ximea` integrates and makes use of the XIMEA Application Programming Interface, which is subject to the License For Customer Use of XIMEA Software.
