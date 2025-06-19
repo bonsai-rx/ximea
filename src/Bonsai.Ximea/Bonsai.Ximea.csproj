@@ -21,14 +21,17 @@
 
   <ItemGroup>
     <Content Include="Bonsai.Ximea.props" PackagePath="build\net472" />
-    <Content Include="$(XimeaApiPath)net472\$(XimeaApiNetFileName)" PackagePath="build\net472\bin" />
-    <Content Include="$(XimeaApiNativePath)$(XimeaApiNativeFileName)" PackagePath="runtimes\win-x64\native" />
+    <Content Include="$(XimeaApiPath)net472\$(XimeaApiNetFileName)" PackagePath="build\net472\bin\x64" />
+    <Content Include="$(XimeaApiNativePath)$(XimeaApiNativeFileName)" PackagePath="runtimes\win-x64\native">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>$(XimeaApiNativeFileName)</TargetPath>
+    </Content>
     <Reference Include="xiApi.NET">
       <HintPath>$(XimeaApiPath)net472\$(XimeaApiNetFileName)</HintPath>
     </Reference>
   </ItemGroup>
 
-  <Target Name="UnzipXimeaApiNative" BeforeTargets="Build">
+  <Target Name="UnzipXimeaApiNative" BeforeTargets="BeforeBuild">
     <Unzip SourceFiles="$(XimeaApiNativePath)$(XimeaApiNativeFileName).zip" DestinationFolder="$(XimeaApiNativePath)" Condition="!Exists('$(XimeaApiNativePath)$(XimeaApiNativeFileName)')" />
   </Target>
 

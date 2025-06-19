@@ -1,7 +1,7 @@
 ﻿<Project>
-  <ItemGroup Condition="'$(Platform.ToLower())' == 'x64' Or '$(Platform.ToLower())' == 'anycpu'">">
-    <Reference Include="xiApi.NET">
-      <HintPath>$(MSBuildThisFileDirectory)..\build\net472\bin\xiApi.NETX64.dll</HintPath>
+  <ItemGroup Condition="'$(Platform.ToLower())' == 'x64' Or '$(Platform.ToLower())' == 'anycpu'">
+    <Reference Include="xiApi.NETX64">
+      <HintPath>$(MSBuildThisFileDirectory)bin\x64\xiApi.NETX64.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
