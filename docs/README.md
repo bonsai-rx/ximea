@@ -1,11 +1,14 @@
-# Bonsai.Ximea
-A Bonsai library for interfacing with XIMEA cameras using the xiAPI
+# Bonsai - XIMEA Library
 
-## Application examples
+A Bonsai library for interfacing with XIMEA cameras using the [xiAPI](https://www.ximea.com/support/wiki/apis/xiAPI).
 
-### How to create a custom operator
+## How to Use
 
-A custom operator can be useful to encapsulate custom initialization logic or to create a reusable component that can be shared with others. In this example, we will create a custom operator that initializes a XIMEA camera with a specific set of parameters and log them to disk. If using this script as an extension, [remember to add the Ximea package to your `Extensions.cproj` file](https://bonsai-rx.org/docs/articles/scripting-extensions.html).
+To use `Bonsai.Ximea` for visual reactive programming, please install this package using the [Bonsai package manager](https://bonsai-rx.org/docs/articles/packages.html).
+
+The package can also be used to create custom operators which can be useful to encapsulate custom initialization logic or to create other reusable components that can be shared with others.
+
+Below we show an example of how to create a custom operator that initializes a XIMEA camera with a specific set of parameters and logs the applied settings to disk. If using this script as an extension, [remember to add the Ximea package to your `Extensions.cproj` file](https://bonsai-rx.org/docs/articles/scripting-extensions.html).
 
 ```csharp
 using System;
@@ -19,7 +22,7 @@ using System.Linq;
 
 namespace Bonsai.Ximea
 {
-    [Description("Configures and initializes a custom instance of a XimeaCapture operator. It will set/get the specified settings and dump to a log file.")]
+    [Description("Configures and initializes a custom instance of a XimeaCapture operator with specific parameters and exports applied settings to a log file.")]
     public class CustomXimeaCapture : XimeaCapture
     {
         public string logFilePath = "log.txt";
@@ -71,3 +74,11 @@ namespace Bonsai.Ximea
     }
 }
 ```
+
+## Additional Documentation
+
+For additional documentation and examples, refer to the [official Bonsai documentation](https://bonsai-rx.org/ximea).
+
+## Feedback & Contributing
+
+`Bonsai.Ximea` is released as open-source under the [MIT license](https://licenses.nuget.org/MIT). Bug reports and contributions are welcome at [the GitHub repository](https://github.com/bonsai-rx/ximea).
